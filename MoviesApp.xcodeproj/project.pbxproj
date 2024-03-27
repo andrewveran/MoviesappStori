@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		018E61823B9AC2B762BB0E89 /* Pods_MoviesApp_MoviesAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E08D95CA44D73B22A4B5C0ED /* Pods_MoviesApp_MoviesAppUITests.framework */; };
+		3D33B4842BB3D3A0002A4D05 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D33B4832BB3D3A0002A4D05 /* SplashViewController.swift */; };
+		3D33B4862BB3D3DE002A4D05 /* SplashScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D33B4852BB3D3DE002A4D05 /* SplashScreenView.xib */; };
 		4EAD245EB3C881B5B6BF9D0B /* Pods_MoviesAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62D5FC472DAB4C89B6357358 /* Pods_MoviesAppTests.framework */; };
 		C21D25D8263B1A62004E9545 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21D25D7263B1A62004E9545 /* Extensions.swift */; };
 		C2256EB42633E571001442E7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2256EB22633E571001442E7 /* HomeView.swift */; };
@@ -61,6 +63,8 @@
 /* Begin PBXFileReference section */
 		1A38CCC5E8321E9274F15C12 /* Pods-MoviesApp-MoviesAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviesApp-MoviesAppUITests.release.xcconfig"; path = "Target Support Files/Pods-MoviesApp-MoviesAppUITests/Pods-MoviesApp-MoviesAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		1FF4E6E23D37ABB01F58DBAA /* Pods-MoviesAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviesAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MoviesAppTests/Pods-MoviesAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3D33B4832BB3D3A0002A4D05 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		3D33B4852BB3D3DE002A4D05 /* SplashScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashScreenView.xib; sourceTree = "<group>"; };
 		62D5FC472DAB4C89B6357358 /* Pods_MoviesAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoviesAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		824ECFD339730CCE07CA188A /* Pods-MoviesApp-MoviesAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviesApp-MoviesAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-MoviesApp-MoviesAppUITests/Pods-MoviesApp-MoviesAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8B3B9270D42F1DA9D4BBF16A /* Pods-MoviesAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviesAppTests.release.xcconfig"; path = "Target Support Files/Pods-MoviesAppTests/Pods-MoviesAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -138,6 +142,8 @@
 		3D38A49D2BB39D1A000AF721 /* SplashScreen */ = {
 			isa = PBXGroup;
 			children = (
+				3D33B4832BB3D3A0002A4D05 /* SplashViewController.swift */,
+				3D33B4852BB3D3DE002A4D05 /* SplashScreenView.xib */,
 			);
 			path = SplashScreen;
 			sourceTree = "<group>";
@@ -413,6 +419,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2C6825F263CCA2900B19D80 /* MainDetailView.xib in Resources */,
+				3D33B4862BB3D3DE002A4D05 /* SplashScreenView.xib in Resources */,
 				C29C18B42633DF7F0067BC9D /* LaunchScreen.storyboard in Resources */,
 				C29C18B12633DF7F0067BC9D /* Assets.xcassets in Resources */,
 				C2256EB72633E571001442E7 /* HomeView.xib in Resources */,
@@ -555,6 +562,7 @@
 				C2E1AFDC263A132F007511C6 /* Movies.swift in Sources */,
 				C29C18A82633DF7F0067BC9D /* AppDelegate.swift in Sources */,
 				C21D25D8263B1A62004E9545 /* Extensions.swift in Sources */,
+				3D33B4842BB3D3A0002A4D05 /* SplashViewController.swift in Sources */,
 				C2E1AFDA263A11F3007511C6 /* ManagerConnections.swift in Sources */,
 				C2256EC22633EA05001442E7 /* HomeViewModel.swift in Sources */,
 				C29C18AA2633DF7F0067BC9D /* SceneDelegate.swift in Sources */,

@@ -43,7 +43,6 @@ class MainDetailView: UIViewController {
     func showMovieData(movie: MovieDetail){
         DispatchQueue.main.async {
             self.lblTitle.text = movie.title
-         //   self.imgMainFilmImage.imageFromServerUrl(urlString: Constants.URL.urlImages+movie.posterPath, placeHolderImage: UIImage(named: "claqueta")!)
             self.lblOverview.text = movie.overview
             self.lblReleaseDate.text = movie.releaseDate
             self.lblTitle.text = movie.originalTitle

@@ -6,9 +6,6 @@
 //  Copyright © 2021 Andres Leal. All rights reserved.
 //
 
-// Esta clase creara el objeto home , pero tambien servira de router para ir a otras vistas / pantallas
-// Inicializador de la clase 
-
 
 import Foundation
 import UIKit

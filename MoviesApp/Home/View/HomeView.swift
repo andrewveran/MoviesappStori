@@ -4,11 +4,7 @@
 //
 //  Created by Andres Leal on 4/24/21.
 //  Copyright © 2021 Andres Leal. All rights reserved.
-//
-// tableView.dequeueReusableCell(withIdentifier: "Cell")!
-//  cell.textLabel?.text = movies[indexPath.row].originalTitle
-// String(describing: MainTableCustomViewCell.self)
-// Datatask .resume al final
+
 
 import UIKit
 import RxSwift
@@ -38,7 +34,7 @@ class HomeView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "The movies App"
+        self.navigationItem.title = "Stori movies App"
         configureTableView()
         viewModel.bind(view: self, router: router)
         getData()
@@ -52,10 +48,10 @@ class HomeView: UIViewController {
     
     private func getData(){
         return viewModel.getListMoviesData()
-            // Manejar la concurrencia o hilos de RxSwift
+
             .subscribe(on: MainScheduler.instance)
             .observe(on: MainScheduler.instance)
-            // Suscribirme a el observable
+
             .subscribe(
                 onNext: { movies in
                     self.movies = movies
@@ -65,9 +61,6 @@ class HomeView: UIViewController {
             }, onCompleted: {
                 print("completado")
             }).disposed(by: disposeBag)
-        
-        // Dar por completado la secuencia de RXSwift
-        //
     }
     
     private func reloadTableView(){
@@ -88,7 +81,6 @@ class HomeView: UIViewController {
             .distinctUntilChanged()
             .subscribe(onNext: { (result) in
                 self.filteredMovies = self.movies.filter({ movie in
-                   // self.mainTableView.reloadData()
                     self.reloadTableView()
                     return movie.title.contains(result)
                 })

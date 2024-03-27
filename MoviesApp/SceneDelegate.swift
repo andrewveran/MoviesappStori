@@ -4,14 +4,7 @@
 //
 //  Created by Andres Leal on 4/24/21.
 //  Copyright © 2021 Andres Leal. All rights reserved.
-//
-//
-// Trabajar sin story board
-// 1) Eliminar el "MAin story board"
-// 2) ir a el "target del proyecto" -> el menu principal de este, y en la opcion "main interface" - quitar o reemplazar
-// 3) info.plist en la ruta   aplication Scene Manifest/Scene Configuration/Aplication Session Role/item 0/Storyboard Name (quitar con el menos(boton))
-// 4) SceneDelegate
-// 5) Eliminar viewController default que crea al proyecto 
+
 
 
 import UIKit
@@ -25,16 +18,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let windowScene = (scene as? UIWindowScene) else { return }  // modify se agrega la variable windowScene
+        guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        window = UIWindow(frame: UIScreen.main.bounds) // se inicializa 
+        window = UIWindow(frame: UIScreen.main.bounds)
         
-        let viewController = HomeRouter().viewController  // inicializa el ui del home
-        let navController = UINavigationController(rootViewController: viewController) // inicializa navController de la tabla
+        let splashViewController = SplashViewController(nibName: "SplashScreenView", bundle: nil)
         
-        window?.rootViewController = navController  //
-        window?.makeKeyAndVisible()   //
-        window?.windowScene = windowScene //
+                window?.rootViewController = splashViewController
+                window?.makeKeyAndVisible()
+                window?.windowScene = windowScene
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+               let viewController = HomeRouter().viewController
+               let navController = UINavigationController(rootViewController: viewController)
+               self.window?.rootViewController = navController
+           }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

@@ -4,8 +4,7 @@
 //
 //  Created by Andres Leal on 4/24/21.
 //  Copyright © 2021 Andres Leal. All rights reserved.
-//
-// weak para evitar ciclos de retenciones de memoria
+
 
 import Foundation
 import RxSwift
@@ -20,7 +19,6 @@ class HomeViewModel{
         self.view = view
         self.router = router
         self.router?.setSourceView(view)
-        // bindear el router con la vista 
     }
     
     func getListMoviesData() -> Observable<[Movie]>{

@@ -84,13 +84,3 @@ class ManagerConnections{
         
     }
 }
-
-
-
-
-
-
-
-// return Observable.create { (observer) -> Disposable in
-//          code
-//      }
