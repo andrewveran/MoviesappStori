@@ -42,10 +42,11 @@ class MainDetailView: UIViewController {
 
     func showMovieData(movie: MovieDetail){
         DispatchQueue.main.async {
+            self.imgMainFilmImage.image = UIImage(named: "claqueta")
             self.lblTitle.text = movie.title
             self.lblOverview.text = movie.overview
             self.lblReleaseDate.text = movie.releaseDate
-            self.lblTitle.text = movie.originalTitle
+            self.lblOriginalTitle.text = movie.originalTitle
             self.lblVoteAverage.text = String(movie.voteAverage)
         }
     }
