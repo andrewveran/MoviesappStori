@@ -1,2 +1,3 @@
-# MoviesappStori
-this is a movie app to stori card challenge 
+# MoviesApp
+
+MoviesApp with mvvm architecture 
